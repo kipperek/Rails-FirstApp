@@ -2,7 +2,7 @@ Ruby on Rails zaliczenie laborek.
 
 Aplikacja - My gists.
 
-	TODO:
+	Zmiany:
 
 	-Wszystkie TODO do zadania.
 	-Wygląd własnoręcznie.
