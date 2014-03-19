@@ -7,5 +7,7 @@ Aplikacja - My gists.
 	-Wszystkie TODO do zadania.
 	-Wygląd własnoręcznie.
 	-Dodatkowo wyszukiwanie wierszy po typie kodu.
+	
+[Przykład działania](http://kczechowicz-gists.herokuapp.com)
 
 
