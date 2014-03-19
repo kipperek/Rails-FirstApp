@@ -1,7 +1,7 @@
 @font-face
 {
-  font-family: Chivo-Regular;
-  src: url('/assets/Chivo-Regular.otf');
+  font-family: U1;
+  src: url('http://kacperczechowicz.pl/other/DS/rsc/fonts/UL.otf');
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 body { background-color: #fff; color: #000;   margin: 0;}
 
 body, p, ol, ul, td {
-  font-family: Chivo-Regular;
+  font-family: U1;
   font-size:   18px;
   color: #000;
   line-height: 18px;
@@ -59,13 +59,21 @@ a:hover{
   background-color:#953533;
 }
 
+
 div.field, div.actions {
   margin-bottom: 10px;
 }
+.field textarea, .field select, .field input[type=text]{
+   margin-top: 10px;
+}
 .field textarea{
-  min-width: 400px;
+  min-width:750px;
   max-width: 750px;
   min-height: 200px;
+}
+input[type=submit]{
+  width: 128px;
+  height: 25px;
 }
 
 #notice {
@@ -111,7 +119,7 @@ div.field, div.actions {
 .highlight2{
   border: 1px dashed #999;
   width: 740px;
-  margin: 10px auto 10px auto;
+  margin: 10px auto 0 auto;
   word-wrap: break-word;
 
 }
@@ -141,9 +149,9 @@ div.field, div.actions {
   display: inline-block;
   margin: 0 10px 0 10px;
   line-height: 70px;
-  width: 140px;
+  width: 110px;
   height: 70px;
-  font-size: 28px;
+  font-size: 22px;
   color: black;
   text-decoration: none;
   text-align: center;
@@ -169,27 +177,30 @@ div.field, div.actions {
 }
 
 
-table{
+ .indexTable{
   width: 100%;
   margin: 0px;
   border-collapse: collapse;
   
 }
-tr{
+.indexTable tr{
   border: 1px solid #953533;
 
 }
-table th{
+.indexTable th{
   color: #F5F5F5;
   text-align: left;
   background: #953533;
   vertical-align: bottom;
   padding: 5px 0 5px 5px;
 }
-table td{
+.indexTable td{
   padding: 5px;
 }
 
 #actions{
   width: 200px;
+}
+#showLinks{
+  text-align: right;
 }
