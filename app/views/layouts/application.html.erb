@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyGists</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="header">
+		<div id="hwraper">
+			<div id="head">
+				<h1>My gists</h1>
+			</div>
+			<div id="menu">
+				<%= link_to 'List', gists_path %>
+				<%= link_to 'New Gist', new_gist_path %>
+			</div>
+		</div>
+	</div>
+	<div id="wraper">
+		<%= yield %>
+	</div>
+</body>
+</html>

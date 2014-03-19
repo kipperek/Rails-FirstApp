@@ -1,0 +1,139 @@
+@font-face
+{
+  font-family: Chivo-Regular;
+  src: url('/assets/Chivo-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body { background-color: #fff; color: #000;   margin: 0;}
+
+body, p, ol, ul, td {
+  font-family: Chivo-Regular;
+  font-size:   18px;
+  color: #000;
+  line-height: 18px;
+
+}
+
+h1{
+  margin: 0;
+}
+h2{
+  margin: 0 0 7px 0;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 14px; /* tu mniej niz body zeby bylo ladnie */
+  margin: 0 0 0 0;
+  
+}
+hr{
+  width: 500px;
+  height: 1px;
+  border: none;
+  background: black;
+  text-align: left;
+  margin: 0 0 20px 0;
+}
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+.field textarea{
+  min-width: 400px;
+  max-width: 750px;
+  min-height: 200px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+.highlight{
+  border: 1px dashed #999;
+  width: 600px;
+  margin: 10px 10px 10px 30px;
+  word-wrap: break-word;
+}
+
+#header{
+  width: 100%;
+  min-width: 800px;
+  height: 70px;
+  background: #02B0D7;
+  margin-bottom: 30px;
+}
+#hwraper{
+  margin: 0 auto 0 auto;
+  padding: 0 50px 0 50px;
+  width: 700px;
+  position: relative;
+}
+#head{
+  float: left;
+  line-height: 70px;
+}
+#menu{
+  float: right;
+
+}
+#menu a,#menu a:link, #menu a:visited{
+  display: inline-block;
+  margin: 0 10px 0 10px;
+  line-height: 70px;
+  width: 140px;
+  height: 70px;
+  font-size: 28px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+#menu a:hover{
+  background: #029DBF;
+}
+
+
+#wraper{
+  padding: 20px;
+  margin: 0 auto 50px auto;
+  width: 760px;
+  background: #FAFAFA;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+}
