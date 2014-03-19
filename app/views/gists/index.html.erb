@@ -13,10 +13,13 @@
   <tbody>
     <% @gists.each do |gist| %>
       <tr>
-        <td><div id="show_snippet"><%= gist.snippet.length > 20 ? gist.snippet[0,20] + "..." : gist.snippet %></div></td>
+        <td><div id="show_snippet">
+        <%= raw Pygments.highlight(gist.snippet.length > 20 ? gist.snippet[0,20] + "..." : gist.snippet, lexer: gist.lang) %>
+        </div>
+        </td>
         <td><%= gist.lang %></td>
         <td><%= gist.description %></td>
-        <td><%= link_to 'Show', gist %>
+        <td id="actions"><%= link_to 'Show', gist %>
         <%= link_to 'Edit', edit_gist_path(gist) %>
         <%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
