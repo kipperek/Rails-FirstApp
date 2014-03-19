@@ -13,7 +13,10 @@ body, p, ol, ul, td {
   font-size:   18px;
   color: #000;
   line-height: 18px;
-
+}
+p{
+  margin: 0 0 10px 0;
+  padding: 0;
 }
 
 h1{
@@ -24,7 +27,7 @@ h2{
 }
 
 pre {
-  background-color: #eee;
+  background-color: #AAE8E8;
   padding: 10px;
   font-size: 14px; /* tu mniej niz body zeby bylo ladnie */
   margin: 0 0 0 0;
@@ -53,6 +56,9 @@ div.field, div.actions {
 
 #notice {
   color: green;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .field_with_errors {
@@ -87,9 +93,10 @@ div.field, div.actions {
 }
 .highlight{
   border: 1px dashed #999;
-  width: 600px;
-  margin: 10px 10px 10px 30px;
+  width: 740px;
+  margin: 10px auto 10px auto;
   word-wrap: break-word;
+
 }
 
 #header{
@@ -130,10 +137,38 @@ div.field, div.actions {
 
 
 #wraper{
-  padding: 20px;
+  padding: 20px 20px 20px 20px;
   margin: 0 auto 50px auto;
   width: 760px;
-  background: #FAFAFA;
+  background: #F5F5F5;
   border-radius: 10px;
-  border: 1px solid #CCC;
+  border: 1px solid #BBB;
+}
+#show_snippet{
+  padding: 10px;
+  background: #CCC;
+  border: 1px dashed #999;
+}
+
+
+table{
+  width: 100%;
+  margin: 0px;
+  border-collapse: collapse;
+  
+}
+tr{
+  border: 1px solid #953533;
+
+}
+table th{
+
+  text-align: left;
+  background: #953533;
+  vertical-align: bottom;
+  padding: 5px 0 5px 5px;
+}
+table td{
+  padding: 5px;
+
 }
