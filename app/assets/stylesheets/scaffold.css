@@ -41,9 +41,23 @@ hr{
   text-align: left;
   margin: 0 0 20px 0;
 }
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+a{
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  border: 1px solid black;
+  background:  #02B0D7;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+}
+a:visited { color: #000; }
+a:hover{
+  color: #F5F5F5;
+  background-color:#953533;
+}
 
 div.field, div.actions {
   margin-bottom: 10px;
@@ -130,6 +144,7 @@ div.field, div.actions {
   color: black;
   text-decoration: none;
   text-align: center;
+  border: none;
 }
 #menu a:hover{
   background: #029DBF;
@@ -162,7 +177,7 @@ tr{
 
 }
 table th{
-
+  color: #F5F5F5;
   text-align: left;
   background: #953533;
   vertical-align: bottom;
