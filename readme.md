@@ -1,6 +1,10 @@
-This is modified Ruby on Rails scaffold app.
+Ruby on Rails zaliczenie laborek.
 
-Gems used:
--Pygments.rb
+Aplikacja - My gists.
+
+TODO:
+	-Wszystkie TODO do zadania.
+	-Wygląd własnoręcznie.
+	-Dodatkowo wyszukiwanie wierszy po typie kodu.
 
 
