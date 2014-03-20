@@ -1,7 +1,3 @@
-<%
-allowed = Pygments.lexers.flatten.unshift("first").select.with_index{|a,i| (i+1) % 2 == 0}.sort 
-allowed = allowed.delete_if { |a| a =~ /.\s./ }
-%>
 <h2>Listing gists</h2>
 <hr/>
 <%= will_paginate %>
