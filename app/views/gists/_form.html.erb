@@ -1,5 +1,9 @@
 <%= form_for(@gist) do |f| %>
-<% allowed = Pygments.lexers.flatten.unshift("first").select.with_index{|a,i| (i+1) % 2 == 0}.sort %>
+<%
+allowed = Pygments.lexers.flatten.unshift("first").select.with_index{|a,i| (i+1) % 2 == 0}.sort 
+
+allowed = allowed.delete_if { |a| a =~ /.\s./ }
+%>
 
   <% if @gist.errors.any? %>
     <div id="error_explanation">

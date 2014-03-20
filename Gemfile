@@ -46,6 +46,7 @@ end
 gem 'pygments.rb'
 gem 'redcarpet'
 gem 'quiet_assets'
+gem 'will_paginate'
 
 group :production do
   gem 'pg', '0.15.1'

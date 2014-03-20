@@ -204,3 +204,28 @@ input[type=submit]{
 #showLinks{
   text-align: right;
 }
+
+.pagination{
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+}
+.pagination a, .pagination a:visited, .pagination a:link{
+  display: inline;
+  border: none;
+  background: none;
+  font-size: 18px;
+}
+.pagination a:hover{
+  color:  #953533;
+}
+.disabled{
+  color: #F5F5F5;
+}
+em.current{
+  font-style:normal;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #02B0D7;
+}
