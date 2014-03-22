@@ -1,14 +1,24 @@
-Ruby on Rails zaliczenie laborek.
-
-Aplikacja - My gists.
+Aplikacja Ruby on Rails - My gists
+====
 
 	Zmiany:
 
 	-Wszystkie TODO do zadania. (Zamiast infinite scrolling -> paginacja)
 	-Wygląd własnoręcznie.
 	-Walidacja dodawanych gistów
-	-Dodatkowo wyszukiwanie wierszy po typie kodu.
+	-Dodatkowo wyszukiwanie wrzutek
+	-Logowanie
+
+
+	Użyte gemy:
 	
-[Przykład działania](http://kczechowicz-gists.herokuapp.com)
+	-gem 'pygments.rb'
+	-gem 'will_paginate'
+	
+
+Przykład działania
+====
+
+[Heroku - myGists](http://kczechowicz-gists.herokuapp.com)
 
 
