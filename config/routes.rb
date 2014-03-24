@@ -1,7 +1,7 @@
 MyGists::Application.routes.draw do
   
   get "gists/search"
-  
+
   resources :gists
   
   root :to => 'gists#index'
