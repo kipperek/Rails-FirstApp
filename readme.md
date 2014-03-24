@@ -2,7 +2,7 @@ Aplikacja Ruby on Rails - My gists
 ====
 
 	Zmiany:
-	==
+	--------------
 
 	-Wszystkie TODO do zadania. (Zamiast infinite scrolling -> paginacja)
 	-Język lista rozwijana (działaja wszystkie języki)
@@ -14,7 +14,7 @@ Aplikacja Ruby on Rails - My gists
 
 
 	Użyte gemy:
-	==
+	--------------
 	
 	-gem 'pygments.rb'
 	-gem 'will_paginate'
