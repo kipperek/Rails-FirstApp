@@ -22,7 +22,7 @@ p{
 h1{
   margin: 0;
 }
-h2{
+h2, h3{
   margin: 0 0 7px 0;
 }
 
@@ -134,7 +134,7 @@ input[type=submit]{
 }
 #hwraper{
   margin: 0 auto 0 auto;
-  padding: 0 50px 0 50px;
+  padding: 0 0 0 50px;
   width: 700px;
   position: relative;
 }
@@ -147,6 +147,7 @@ input[type=submit]{
 
 }
 #menu a,#menu a:link, #menu a:visited{
+  border-radius: 6px;
   display: inline-block;
   margin: 0 10px 0 10px;
   line-height: 70px;
@@ -221,7 +222,7 @@ input[type=submit]{
   color:  #953533;
 }
 .disabled{
-  color: #F5F5F5;
+  display: none;
 }
 em.current{
   font-style:normal;
@@ -237,4 +238,23 @@ em.current{
   text-align: center;
   color: black;
   font-size: 12px;
+}
+#footer a,#footer a:visited, #footer a:link{
+  font-size: 12px;
+  display: inline;
+  color: #02B0D7;
+  background: none;
+  border: none;
+}
+#footer a:hover{
+
+  text-decoration: underline;
+}
+
+#searchForm{
+  margin: 0 0 20px 0;
+}
+.prompt{
+  font-size: 12px;
+  color: #555;
 }

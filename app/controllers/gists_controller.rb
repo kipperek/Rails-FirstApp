@@ -6,6 +6,11 @@ class GistsController < ApplicationController
   def index
     @gists = Gist.paginate(page: params[:page], per_page: 10).order('created_at DESC')
   end
+  
+  # GET /gists/show
+  def search
+    @gists = @gists = Gist.search(params[:lang],params[:desc])
+  end
 
   # GET /gists/1
   # GET /gists/1.json

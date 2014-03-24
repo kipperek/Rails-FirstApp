@@ -15,12 +15,13 @@
 			<div id="menu">
 				<%= link_to 'List', gists_path %>
 				<%= link_to 'New Gist', new_gist_path %>
+				<%= link_to 'Find Gists', gists_search_path %>
 			</div>
 		</div>
 	</div>
 	<div id="wraper">
 		<%= yield %>
 	</div>
-	<div id="footer">&copy;<%= Time.now.year %> by Kacper Czechowicz</div>
+	<div id="footer">&copy;<%= Time.now.year %> by <%= link_to 'Kacper Czechowicz', 'https://github.com/kipperek' %></div>
 </body>
 </html>

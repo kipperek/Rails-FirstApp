@@ -3,5 +3,13 @@ class Gist < ActiveRecord::Base
 	                    length: { minimum: 3 }
 	validates :description, presence: true,
 	                    length: { minimum: 1 }
+
+	def self.search(search, search2)
+  		if search && search2
+       		find(:all, :conditions => ['lang LIKE ? AND description LIKE ?', "%#{search}%","%#{search2}%"])
+    	else
+     		limit(0)
+    	end
+   	end
   
 end

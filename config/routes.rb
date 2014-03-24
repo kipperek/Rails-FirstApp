@@ -1,7 +1,11 @@
 MyGists::Application.routes.draw do
+  
+  get "gists/search"
+  
   resources :gists
+  
   root :to => 'gists#index'
-  get "gists/find"
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

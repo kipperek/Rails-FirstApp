@@ -1,0 +1,339 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+.hll { background-color: #ffffcc }
+.c { color: #888888 } /* Comment */
+.err { color: #FF0000; background-color: #FFAAAA } /* Error */
+.k { color: #008800; font-weight: bold } /* Keyword */
+.o { color: #333333 } /* Operator */
+.cm { color: #888888 } /* Comment.Multiline */
+.cp { color: #557799 } /* Comment.Preproc */
+.c1 { color: #888888 } /* Comment.Single */
+.cs { color: #cc0000; font-weight: bold } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #888888 } /* Generic.Output */
+.gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0044DD } /* Generic.Traceback */
+.kc { color: #008800; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008800; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008800; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #003388; font-weight: bold } /* Keyword.Pseudo */
+.kr { color: #008800; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #333399; font-weight: bold } /* Keyword.Type */
+.m { color: #6600EE; font-weight: bold } /* Literal.Number */
+.s { background-color: #fff0f0 } /* Literal.String */
+.na { color: #0000CC } /* Name.Attribute */
+.nb { color: #007020 } /* Name.Builtin */
+.nc { color: #BB0066; font-weight: bold } /* Name.Class */
+.no { color: #003366; font-weight: bold } /* Name.Constant */
+.nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.ni { color: #880000; font-weight: bold } /* Name.Entity */
+.ne { color: #FF0000; font-weight: bold } /* Name.Exception */
+.nf { color: #0066BB; font-weight: bold } /* Name.Function */
+.nl { color: #997700; font-weight: bold } /* Name.Label */
+.nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.nt { color: #007700 } /* Name.Tag */
+.nv { color: #996633 } /* Name.Variable */
+.ow { color: #000000; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #6600EE; font-weight: bold } /* Literal.Number.Float */
+.mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
+.mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
+.mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sb { background-color: #fff0f0 } /* Literal.String.Backtick */
+.sc { color: #0044DD } /* Literal.String.Char */
+.sd { color: #DD4422 } /* Literal.String.Doc */
+.s2 { background-color: #fff0f0 } /* Literal.String.Double */
+.se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
+.sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
+.si { background-color: #eeeeee } /* Literal.String.Interpol */
+.sx { color: #DD2200; background-color: #fff0f0 } /* Literal.String.Other */
+.sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
+.s1 { background-color: #fff0f0 } /* Literal.String.Single */
+.ss { color: #AA6600 } /* Literal.String.Symbol */
+.bp { color: #007020 } /* Name.Builtin.Pseudo */
+.vc { color: #336699 } /* Name.Variable.Class */
+.vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
+.vi { color: #3333BB } /* Name.Variable.Instance */
+.il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */@font-face
+{
+  font-family: U1;
+  src: url('http://kacperczechowicz.pl/other/DS/rsc/fonts/UL.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body { background-color: #fff; color: #000;   margin: 0;}
+
+body, p, ol, ul, td {
+  font-family: U1;
+  font-size:   18px;
+  color: #000;
+  line-height: 18px;
+}
+p{
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+h1{
+  margin: 0;
+}
+h2, h3{
+  margin: 0 0 7px 0;
+}
+
+pre {
+  background-color: #AAE8E8;
+  padding: 10px;
+  font-size: 14px; /* tu mniej niz body zeby bylo ladnie */
+  margin: 0 0 0 0;
+  
+}
+hr{
+  width: 500px;
+  height: 1px;
+  border: none;
+  background: black;
+  text-align: left;
+  margin: 0 0 20px 0;
+}
+a{
+  border-radius: 5px;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  border: 1px solid black;
+  background:  #02B0D7;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+}
+a:visited { color: #000; }
+a:hover{
+  color: #F5F5F5;
+  background-color:#953533;
+}
+
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+.field textarea, .field select, .field input[type=text]{
+   margin-top: 10px;
+}
+.field textarea{
+  min-width:750px;
+  max-width: 750px;
+  min-height: 200px;
+}
+input[type=submit]{
+  width: 128px;
+  height: 25px;
+}
+
+#notice {
+  color: green;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+.highlight{
+}
+
+.highlight2{
+  border: 1px dashed #999;
+  width: 740px;
+  margin: 10px auto 0 auto;
+  word-wrap: break-word;
+
+}
+
+#header{
+  width: 100%;
+  min-width: 800px;
+  height: 70px;
+  background: #02B0D7;
+  margin-bottom: 30px;
+}
+#hwraper{
+  margin: 0 auto 0 auto;
+  padding: 0 0 0 50px;
+  width: 700px;
+  position: relative;
+}
+#head{
+  float: left;
+  line-height: 70px;
+}
+#menu{
+  float: right;
+
+}
+#menu a,#menu a:link, #menu a:visited{
+  border-radius: 6px;
+  display: inline-block;
+  margin: 0 10px 0 10px;
+  line-height: 70px;
+  width: 110px;
+  height: 70px;
+  font-size: 22px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+}
+#menu a:hover{
+  background: #029DBF;
+}
+
+
+#wraper{
+  padding: 20px 20px 20px 20px;
+  margin: 0 auto 5px auto;
+  width: 760px;
+  background: #F5F5F5;
+  border-radius: 10px;
+  border: 1px solid #BBB;
+}
+#show_snippet{
+ background: #AAE8E8;
+ border: 1px dashed #999;
+ width: 250px;
+}
+
+
+ .indexTable{
+  width: 100%;
+  margin: 0px;
+  border-collapse: collapse;
+  
+}
+.indexTable tr{
+  border: 1px solid #953533;
+
+}
+.indexTable th{
+  color: #F5F5F5;
+  text-align: left;
+  background: #953533;
+  vertical-align: bottom;
+  padding: 5px 0 5px 5px;
+}
+.indexTable td{
+  padding: 5px;
+}
+
+#actions{
+  width: 200px;
+}
+#showLinks{
+  text-align: right;
+}
+
+.pagination{
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+}
+.pagination a, .pagination a:visited, .pagination a:link{
+  display: inline;
+  border: none;
+  background: none;
+  font-size: 18px;
+}
+.pagination a:hover{
+  color:  #953533;
+}
+.disabled{
+  display: none;
+}
+em.current{
+  font-style:normal;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #02B0D7;
+}
+#footer{
+  margin: 0 auto 50px; auto;
+  width: 100%;
+  min-width: 800px;
+  text-align: center;
+  color: black;
+  font-size: 12px;
+}
+#footer a,#footer a:visited, #footer a:link{
+  font-size: 12px;
+  display: inline;
+  color: #02B0D7;
+  background: none;
+  border: none;
+}
+#footer a:hover{
+
+  text-decoration: underline;
+}
+
+#searchForm{
+  margin: 0 0 20px 0;
+}
+.prompt{
+  font-size: 12px;
+  color: #555;
+}
