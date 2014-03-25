@@ -13,11 +13,16 @@
 				<h1><img src="http://s4.postimg.org/4j38affex/scissors.png" alt="logo">My gists</h1>
 			</div>
 			<div id="menu">
-				<%= link_to 'List', gists_path %>
+				<%- if user_signed_in? %>
 				<%= link_to 'New Gist', new_gist_path %>
+				<%- end %>
+				<%= link_to 'List', gists_path %>
 				<%= link_to 'Find Gists', gists_search_path %>
 			</div>
 		</div>
+	</div>
+	<div id="userWraper">
+		<%= render 'common/session' %>
 	</div>
 	<div id="wraper">
 		<%= yield %>

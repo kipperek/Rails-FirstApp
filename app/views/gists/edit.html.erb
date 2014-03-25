@@ -1,6 +1,10 @@
 <h2>Editing gist</h2>
 <hr/>
+<%- if user_signed_in? %>
 <%= render 'form' %>
+<%- else %>
+Please sign in to edit gists. <br><br>
+<%- end %>
 
 <%= link_to 'Show', @gist %> 
 <%= link_to 'Back', gists_path %>

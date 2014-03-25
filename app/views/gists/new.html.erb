@@ -1,6 +1,9 @@
 <h2>New gist</h2>
 <hr/>
-
+<%- if user_signed_in? %>
 <%= render 'form' %>
+<%- else %>
+Please sign in to add new gists. <br><br>
+<%- end %>
 
 <%= link_to 'Back', gists_path %>

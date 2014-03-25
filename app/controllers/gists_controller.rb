@@ -1,5 +1,7 @@
 class GistsController < ApplicationController
+  before_filter :authorized_user!, :except => [:index, :show, :search]
   before_action :set_gist, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /gists
   # GET /gists.json
