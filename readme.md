@@ -11,6 +11,7 @@ Aplikacja Ruby on Rails - My gists
 	-Walidacja dodawanych gistów
 	-Dodatkowo wyszukiwanie wrzutek
 	-Logowanie
+	-Blokowanie prób zepsucia Pygments - nieznany język zamienia na text
 
 
 	Użyte gemy:

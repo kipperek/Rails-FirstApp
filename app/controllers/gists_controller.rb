@@ -31,7 +31,8 @@ class GistsController < ApplicationController
   # POST /gists
   # POST /gists.json
   def create
-    @gist = Gist.new(gist_params)
+    @gist = Gist.new(change_lang(gist_params))
+    #@gist.lang = change_lang(@gist.lang)
 
     respond_to do |format|
       if @gist.save
@@ -48,7 +49,7 @@ class GistsController < ApplicationController
   # PATCH/PUT /gists/1.json
   def update
     respond_to do |format|
-      if @gist.update(gist_params)
+      if @gist.update(change_lang(gist_params))
         format.html { redirect_to @gist, notice: 'Gist was successfully updated.' }
         format.json { head :no_content }
       else
@@ -77,5 +78,35 @@ class GistsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def gist_params
       params.require(:gist).permit(:snippet, :lang, :description)
+    end
+
+    #Pygments langs security
+    def not_allowed?(lang)
+      allowed = Pygments.lexers.flatten.select.with_index{|a,i| (i+1) % 2 == 0}
+      allowed = allowed.map{|a| a[:aliases][0]}
+      allowed = allowed.delete_if{|a| (/-cpp/ =~ a || /-objc/ =~ a)}
+      allowed = allowed.sort
+
+      good_lang = false
+      allowed.each do |a|
+
+        if a == lang
+          good_lang = true
+          break
+        end
+
+      end
+
+
+      !good_lang
+    end
+
+    def change_lang(gists)
+     
+      if not_allowed?(gists[:lang])
+        gists[:lang] = "text"
+      end
+
+      return gists
     end
 end
