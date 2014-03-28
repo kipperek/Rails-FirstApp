@@ -81,3 +81,518 @@ Processing by GistsController#index as HTML
   Rendered gists/index.html.erb within layouts/application (1.1ms)
   Rendered common/_session.html.erb (0.3ms)
 Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:41:39 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GistsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (3.5ms)
+  Rendered common/_session.html.erb (0.8ms)
+Completed 200 OK in 457ms (Views: 440.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:41:41 +0100
+Processing by GistsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (2.4ms)
+  Rendered common/_session.html.erb (0.7ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/gists/search" for 127.0.0.1 at 2014-03-27 21:41:41 +0100
+Processing by GistsController#search as HTML
+  [1m[35mGist Load (0.1ms)[0m  SELECT "gists".* FROM "gists" LIMIT 0
+  Rendered gists/search.html.erb within layouts/application (23.1ms)
+  Rendered common/_session.html.erb (0.2ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:41:42 +0100
+Processing by GistsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  [1m[35mGist Load (0.1ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  Rendered gists/index.html.erb within layouts/application (1.1ms)
+  Rendered common/_session.html.erb (0.5ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/gists/search" for 127.0.0.1 at 2014-03-27 21:41:43 +0100
+Processing by GistsController#search as HTML
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" LIMIT 0[0m
+  Rendered gists/search.html.erb within layouts/application (10.6ms)
+  Rendered common/_session.html.erb (0.3ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/gists/search?lang=Clipper&desc=&commit=Search" for 127.0.0.1 at 2014-03-27 21:41:46 +0100
+Processing by GistsController#search as HTML
+  Parameters: {"lang"=>"Clipper", "desc"=>"", "commit"=>"Search"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/kacper/Projekty/my_gists/app/models/gist.rb:9)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/kacper/Projekty/my_gists/app/models/gist.rb:9)
+  [1m[35mGist Load (0.2ms)[0m  SELECT "gists".* FROM "gists" WHERE (lang='Clipper' AND description LIKE '%%')
+  Rendered gists/search.html.erb within layouts/application (7.5ms)
+  Rendered common/_session.html.erb (0.3ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/gists/search?lang=ada&desc=&commit=Search" for 127.0.0.1 at 2014-03-27 21:41:48 +0100
+Processing by GistsController#search as HTML
+  Parameters: {"lang"=>"ada", "desc"=>"", "commit"=>"Search"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/kacper/Projekty/my_gists/app/models/gist.rb:9)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/kacper/Projekty/my_gists/app/models/gist.rb:9)
+  [1m[36mGist Load (0.3ms)[0m  [1mSELECT "gists".* FROM "gists" WHERE (lang='ada' AND description LIKE '%%')[0m
+  Rendered gists/search.html.erb within layouts/application (6.5ms)
+  Rendered common/_session.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:51:50 +0100
+Processing by GistsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (1.3ms)
+  Rendered common/_session.html.erb (0.4ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:52:59 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GistsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (5.2ms)
+  Rendered common/_session.html.erb (0.8ms)
+Completed 200 OK in 60ms (Views: 43.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:52:59 +0100
+Processing by GistsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (1.7ms)
+  Rendered common/_session.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:53:00 +0100
+Processing by GistsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (1.1ms)
+  Rendered common/_session.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (27.8ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 27 Mar 2014 20:53:05 UTC +00:00], ["description", "Header style"], ["lang", "css"], ["snippet", ".header{width: 100%; height: 50px;}"], ["updated_at", Thu, 27 Mar 2014 20:53:05 UTC +00:00]]
+  [1m[35m (119.3ms)[0m  commit transaction
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:53:13 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GistsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (148.8ms)
+  Rendered common/_session.html.erb (0.8ms)
+Completed 200 OK in 203ms (Views: 186.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/gists/1" for 127.0.0.1 at 2014-03-27 21:53:16 +0100
+Processing by GistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGist Load (0.4ms)[0m  SELECT "gists".* FROM "gists" WHERE "gists"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered gists/show.html.erb within layouts/application (2.1ms)
+  Rendered common/_session.html.erb (3.0ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:53:25 +0100
+Processing by GistsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  [1m[35mGist Load (0.2ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  Rendered gists/index.html.erb within layouts/application (6.5ms)
+  Rendered common/_session.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (100.6ms)[0m  [1mCREATE TABLE "gists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "snippet" text, "lang" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (104.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (97.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (109.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (86.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (98.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140325211856')[0m
+  [1m[35m (89.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140317214226')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 27 Mar 2014 20:53:35 UTC +00:00], ["description", "Header style"], ["lang", "css"], ["snippet", ".header{width: 100%; height: 50px;}"], ["updated_at", Thu, 27 Mar 2014 20:53:35 UTC +00:00]]
+  [1m[35m (87.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 27 Mar 2014 20:54:17 UTC +00:00], ["description", "Header style"], ["lang", "css"], ["snippet", ".header{\n\t\twidth: 100%;\n\t \theight: 50px;\n\t }"], ["updated_at", Thu, 27 Mar 2014 20:54:17 UTC +00:00]]
+  [1m[35m (103.7ms)[0m  commit transaction
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:54:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GistsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (130.8ms)
+  Rendered common/_session.html.erb (0.8ms)
+Completed 200 OK in 180ms (Views: 163.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/gists/2" for 127.0.0.1 at 2014-03-27 21:54:31 +0100
+Processing by GistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mGist Load (0.2ms)[0m  SELECT "gists".* FROM "gists" WHERE "gists"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered gists/show.html.erb within layouts/application (2.2ms)
+  Rendered common/_session.html.erb (0.7ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (180.2ms)[0m  [1mCREATE TABLE "gists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "snippet" text, "lang" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (106.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (109.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (98.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (129.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (101.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140325211856')[0m
+  [1m[35m (88.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140317214226')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 27 Mar 2014 20:54:45 UTC +00:00], ["description", "Header style"], ["lang", "css"], ["snippet", ".header{\n\t\twidth: 100%;\n\t \theight: 50px;\n\t }"], ["updated_at", Thu, 27 Mar 2014 20:54:45 UTC +00:00]]
+  [1m[35m (87.4ms)[0m  commit transaction
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:54:50 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GistsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (117.9ms)
+  Rendered common/_session.html.erb (0.7ms)
+Completed 200 OK in 163ms (Views: 147.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:54:51 +0100
+Processing by GistsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.2ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (9.3ms)
+  Rendered common/_session.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gists/1" for 127.0.0.1 at 2014-03-27 21:54:53 +0100
+Processing by GistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGist Load (0.3ms)[0m  SELECT "gists".* FROM "gists" WHERE "gists"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered gists/show.html.erb within layouts/application (3.0ms)
+  Rendered common/_session.html.erb (0.3ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-27 21:55:02 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/kacper/.rvm/gems/ruby-2.1.1/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered /home/kacper/.rvm/gems/ruby-2.1.1/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (56.6ms)
+  Rendered common/_session.html.erb (0.7ms)
+Completed 200 OK in 99ms (Views: 81.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-03-27 21:55:03 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/kacper/.rvm/gems/ruby-2.1.1/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.6ms)
+  Rendered /home/kacper/.rvm/gems/ruby-2.1.1/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (4.0ms)
+  Rendered common/_session.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-03-27 21:55:11 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xso5K0uDT/15WyNkN35Khbi/QsQrI9mHYivcBF5UR20=", "user"=>{"email"=>"aa@aa.pl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'aa@aa.pl' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 27 Mar 2014 20:55:11 UTC +00:00], ["email", "aa@aa.pl"], ["encrypted_password", "$2a$10$vYSwzMAMi.F.GFsxSK7dwOihhso248.22Oked7r8FpDFk3UGJlk4."], ["updated_at", Thu, 27 Mar 2014 20:55:11 UTC +00:00]]
+  [1m[35m (117.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Thu, 27 Mar 2014 20:55:12 UTC +00:00], ["current_sign_in_at", Thu, 27 Mar 2014 20:55:12 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Thu, 27 Mar 2014 20:55:12 UTC +00:00]]
+  [1m[36m (130.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 447ms (ActiveRecord: 251.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-27 21:55:12 +0100
+Processing by GistsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered gists/index.html.erb within layouts/application (43.7ms)
+  Rendered common/_session.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/gists/1" for 127.0.0.1 at 2014-03-27 21:55:14 +0100
+Processing by GistsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xso5K0uDT/15WyNkN35Khbi/QsQrI9mHYivcBF5UR20=", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGist Load (0.2ms)[0m  SELECT "gists".* FROM "gists" WHERE "gists"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  DELETE FROM "gists" WHERE "gists"."id" = ?  [["id", 1]]
+  [1m[36m (153.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/gists
+Completed 302 Found in 161ms (ActiveRecord: 155.4ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:55:14 +0100
+Processing by GistsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.2ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered common/_session.html.erb (0.3ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 27 Mar 2014 20:56:07 UTC +00:00], ["description", "Header style"], ["lang", "css"], ["snippet", ".header{\n\twidth: 100%;\n\theight: 50px;\n\tbackground: url('graph/bg.jpg');\n}"], ["updated_at", Thu, 27 Mar 2014 20:56:07 UTC +00:00]]
+  [1m[35m (136.1ms)[0m  commit transaction
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:56:13 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GistsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered gists/index.html.erb within layouts/application (137.5ms)
+  Rendered common/_session.html.erb (0.7ms)
+Completed 200 OK in 186ms (Views: 169.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/gists/2" for 127.0.0.1 at 2014-03-27 21:56:15 +0100
+Processing by GistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGist Load (0.8ms)[0m  [1mSELECT "gists".* FROM "gists" WHERE "gists"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered gists/show.html.erb within layouts/application (4.5ms)
+  Rendered common/_session.html.erb (0.8ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:56:27 +0100
+Processing by GistsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  [1m[35mGist Load (0.1ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered gists/index.html.erb within layouts/application (7.1ms)
+  Rendered common/_session.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/gists/2" for 127.0.0.1 at 2014-03-27 21:56:30 +0100
+Processing by GistsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xso5K0uDT/15WyNkN35Khbi/QsQrI9mHYivcBF5UR20=", "id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" WHERE "gists"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.2ms)[0m  [1mDELETE FROM "gists" WHERE "gists"."id" = ?[0m  [["id", 2]]
+  [1m[35m (103.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/gists
+Completed 302 Found in 110ms (ActiveRecord: 105.8ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:56:30 +0100
+Processing by GistsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  [1m[35mGist Load (0.1ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  Rendered gists/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered common/_session.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:58:28 +0100
+Processing by GistsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.2ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered common/_session.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-27 21:58:29 +0100
+Processing by GistsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  [1m[35mGist Load (0.2ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  Rendered gists/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered common/_session.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/gists/search" for 127.0.0.1 at 2014-03-27 21:58:30 +0100
+Processing by GistsController#search as HTML
+  [1m[35mGist Load (0.1ms)[0m  SELECT "gists".* FROM "gists" LIMIT 0
+  Rendered gists/search.html.erb within layouts/application (13.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered common/_session.html.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (130.8ms)[0m  [1mCREATE TABLE "gists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "snippet" text, "lang" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (102.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (97.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (97.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (86.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (97.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140325211856')[0m
+  [1m[35m (86.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140317214226')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/gists/new" for 127.0.0.1 at 2014-03-28 09:26:14 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GistsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :authorized_user! rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-28 09:26:14 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/kacper/.rvm/gems/ruby-2.1.1/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered /home/kacper/.rvm/gems/ruby-2.1.1/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (16.2ms)
+  Rendered common/_session.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 50.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-28 09:26:16 +0100
+Processing by GistsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  [1m[35mGist Load (0.1ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  Rendered gists/index.html.erb within layouts/application (3.1ms)
+  Rendered common/_session.html.erb (0.8ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-28 09:26:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GistsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (4.3ms)
+  Rendered common/_session.html.erb (0.8ms)
+Completed 200 OK in 62ms (Views: 45.1ms | ActiveRecord: 1.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Fri, 28 Mar 2014 08:28:37 UTC +00:00], ["description", "Header style"], ["lang", "css"], ["snippet", ".header{\n\twidth: 100%;\n\theight: 50px;\n\tbackground: url('graph/bg.jpg');\n}"], ["updated_at", Fri, 28 Mar 2014 08:28:37 UTC +00:00]]
+  [1m[35m (107.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 28 Mar 2014 08:28:37 UTC +00:00], ["description", "Styling body"], ["lang", "css"], ["snippet", "body{\n\tcolor: black;\n\tfont-family: Arial;\n\tfont-size: 18px;\n\tbackground-color: green;\n}"], ["updated_at", Fri, 28 Mar 2014 08:28:37 UTC +00:00]]
+  [1m[36m (86.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00], ["description", "Main function in c"], ["lang", "c"], ["snippet", "int main(String args[]){\n\t//TODO\n}"], ["updated_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00]]
+  [1m[35m (86.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00], ["description", "jQuery"], ["lang", "js"], ["snippet", "$(document).ready(function(){\n\t//TODO\n\t});"], ["updated_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00]]
+  [1m[36m (88.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00], ["description", "HTML5"], ["lang", "html"], ["snippet", "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Site tittle</tittle>\n\t</head>\n\t<body>\n\t\t<h1>Some site</h1>\n\t</body>\n</html>"], ["updated_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00]]
+  [1m[35m (95.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00], ["description", "Note"], ["lang", "text"], ["snippet", "Hello! This is some note.\n\nAnd some whitespaces."], ["updated_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00]]
+  [1m[36m (86.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00], ["description", "Java class"], ["lang", "java"], ["snippet", "protected class MyClass{\n\t//TODO CLASS MEMBERS\n}"], ["updated_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00]]
+  [1m[35m (86.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00], ["description", "c for loop"], ["lang", "c"], ["snippet", "int forLoop(int a, int b, int c)\n{  \n  for(int i=0; i<b; i++)\n  {\n    c += b;\n    c -= i;\n  }\n}"], ["updated_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00]]
+  [1m[36m (86.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00], ["description", "Testing bash code"], ["lang", "bash"], ["snippet", "#!/bin/bash\n#test\necho 'testing echo'"], ["updated_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00]]
+  [1m[35m (86.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00], ["description", "Sys out"], ["lang", "java"], ["snippet", "System.out.println('Java printing to console')"], ["updated_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00]]
+  [1m[36m (95.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00], ["description", "Polish poem"], ["lang", "text"], ["snippet", "Chrząszcz brzmi w trzcinie w Szczebrzeszynie,\nW szczękach chrząszcza trzeszczy miąższ,\nCzcza szczypawka czka w Szczecinie,\nChrząszcza szczudłem przechrzcił wąż,\nStrząsa skrzydła z dżdżu,\nA trzmiel w puszczy, tuż przy Pszczynie,\nStraszny wszczyna szum…"], ["updated_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00]]
+  [1m[35m (88.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00], ["description", "Some javasript"], ["lang", "js"], ["snippet", "var fun = function(fun2){\n\tfun2.type= 'Adder';\n\t\n\tif(fun2.type){\n\t\tconsole.log('Fun2 has type');\n\t}\n}"], ["updated_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00]]
+  [1m[36m (86.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00], ["description", "html header"], ["lang", "html"], ["snippet", "<h1>Hello world!</h1>"], ["updated_at", Fri, 28 Mar 2014 08:28:38 UTC +00:00]]
+  [1m[35m (86.7ms)[0m  commit transaction
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-28 09:28:44 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GistsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.2ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (229.9ms)
+  Rendered common/_session.html.erb (0.8ms)
+Completed 200 OK in 289ms (Views: 272.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/gists?page=2" for 127.0.0.1 at 2014-03-28 09:28:48 +0100
+Processing by GistsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.2ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 10[0m
+  Rendered gists/index.html.erb within layouts/application (23.4ms)
+  Rendered common/_session.html.erb (1.3ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/gists?page=1" for 127.0.0.1 at 2014-03-28 09:28:58 +0100
+Processing by GistsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.3ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (16.1ms)
+  Rendered common/_session.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gists/9" for 127.0.0.1 at 2014-03-28 09:29:03 +0100
+Processing by GistsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mGist Load (0.3ms)[0m  SELECT "gists".* FROM "gists" WHERE "gists"."id" = ? LIMIT 1  [["id", "9"]]
+  Rendered gists/show.html.erb within layouts/application (2.5ms)
+  Rendered common/_session.html.erb (0.3ms)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-28 09:29:05 +0100
+Processing by GistsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  [1m[35mGist Load (0.3ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  Rendered gists/index.html.erb within layouts/application (20.0ms)
+  Rendered common/_session.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/gists/11" for 127.0.0.1 at 2014-03-28 09:29:09 +0100
+Processing by GistsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGist Load (0.1ms)[0m  [1mSELECT "gists".* FROM "gists" WHERE "gists"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  Rendered gists/show.html.erb within layouts/application (1.8ms)
+  Rendered common/_session.html.erb (0.3ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-03-28 09:29:15 +0100
+Processing by GistsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "gists"
+  [1m[36mGist Load (0.5ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  Rendered gists/index.html.erb within layouts/application (23.1ms)
+  Rendered common/_session.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.7ms)
