@@ -35,37 +35,12 @@ allowed = allowed.sort
 <% if(@gists.length > 0) %>
 <h3>Results</h3>
 <hr/>
-<div id="gistsContainer">
-    <% @gists.each do |gist| %>
-    <div class="indexBody">
-   
-      <div id="lang">
-        <div id="langHead" class="ih">Lang<hr/></div>
-        <%= gist.lang %>
-      </div>
-       
-      <div id="desc">
-        <div id="descHead" class="ih">Description<hr/></div>
-        <%= gist.description %>
-      </div>
-
-       <div id="snippet">
-          <div id="snippetHead" class="ih">Snippet<hr/></div>
-          <div id="show_snippet">
-          <%= raw Pygments.highlight(gist.snippet.length > 20 ? gist.snippet[0,20] + "..." : gist.snippet, lexer: gist.lang) %>
-          </div>
-      </div>
-        
-      <div id="actions">
-        <%= link_to 'Show', gist %>
-        <%- if user_signed_in? %>
-          <%= link_to 'Edit', edit_gist_path(gist) %>
-          <%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <%- end %>
-      </div>
+ <div id="gistsContainer">
+    <div id="page">
+      <%= render @gists %>
     </div>
-  <% end %>
   </div>
+  <%= paginate @gists %>
 <% elsif(@gists.length == 0 && (params.has_key?(:lang) || params.has_key?(:desc))) %>
 <b>No results found.</b>
 <% end %>

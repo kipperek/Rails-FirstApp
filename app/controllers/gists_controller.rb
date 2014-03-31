@@ -12,6 +12,7 @@ class GistsController < ApplicationController
   # GET /gists/show
   def search
     @gists = Gist.search(params[:lang],params[:desc])
+    @gists = Kaminari.paginate_array(@gists).page(params[:page])
   end
 
   # GET /gists/1
