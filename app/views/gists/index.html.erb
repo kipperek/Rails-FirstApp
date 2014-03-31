@@ -1,34 +1,36 @@
 <h2>Listing gists</h2>
 <hr/>
 <%= will_paginate %>
-<table class="indexTable">
-  <thead>
-    <tr>
-      <th>Snippet</th>
-      <th>Lang</th>
-      <th>Description</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
+  <div id="gistsContainer">
+  <% @gists.each do |gist| %>
+    <div class="indexBody">
+   
+      <div id="lang">
+        <div id="langHead" class="ih">Lang<hr/></div>
+        <%= gist.lang %>
+      </div>
+       
+      <div id="desc">
+        <div id="descHead" class="ih">Description<hr/></div>
+        <%= gist.description %>
+      </div>
 
-  <tbody>
-    <% @gists.each do |gist| %>
-      <tr>
-        <td><div id="show_snippet">
-        <%= raw Pygments.highlight(gist.snippet.length > 20 ? gist.snippet[0,20] + "..." : gist.snippet, lexer: gist.lang) %>
-        </div>
-        </td>
-        <td><%= gist.lang %></td>
-        <td><%= gist.description %></td>
-        <td id="actions"><%= link_to 'Show', gist %>
+       <div id="snippet">
+          <div id="snippetHead" class="ih">Snippet<hr/></div>
+          <div id="show_snippet">
+          <%= raw Pygments.highlight(gist.snippet.length > 20 ? gist.snippet[0,20] + "..." : gist.snippet, lexer: gist.lang) %>
+          </div>
+      </div>
+        
+      <div id="actions">
+        <%= link_to 'Show', gist %>
         <%- if user_signed_in? %>
-        <%= link_to 'Edit', edit_gist_path(gist) %>
-        <%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Edit', edit_gist_path(gist) %>
+          <%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %>
         <%- end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      </div>
+    </div>
+  <% end %>
+  </div>
 <%= will_paginate %>
 

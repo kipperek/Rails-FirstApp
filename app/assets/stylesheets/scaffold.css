@@ -1,16 +1,9 @@
-@font-face
-{
-  font-family: U1;
-  src: url('http://kacperczechowicz.pl/other/DS/rsc/fonts/UL.otf');
-  font-weight: normal;
-  font-style: normal;
-  
-}
 
+@media only screen and (min-width: 800px){
 body { background-color: #fff; color: #000;   margin: 0;}
 
 body, p, ol, ul, td {
-  font-family: U1;
+  font-family: Sans;
   font-size:   18px;
   color: #000;
   line-height: 18px;
@@ -40,7 +33,7 @@ hr{
   border: none;
   background: black;
   text-align: left;
-  margin: 0 0 20px 0;
+  margin: 0 0 21px 0;
 }
 a{
   outline: none;
@@ -132,7 +125,6 @@ input[type=submit]{
   min-width: 800px;
   height: 70px;
   background: #02B0D7;
-  margin-bottom: 15px;
 }
 #hwraper{
   margin: 0 auto 0 auto;
@@ -175,37 +167,42 @@ input[type=submit]{
   border-radius: 10px;
   border: 1px solid #BBB;
 }
+/* TUTAJ PREZENACJA DANYCH */
+
+.indexBody{
+  background: #E9E9E9;
+  vertical-align: top;
+  display: inline-block;
+  margin: 6px 3px 6px 3px;
+  padding:10px;
+  border: 1px solid #939393;
+  border-radius: 10px;
+  width: 221px;
+}
+.indexBody div{
+  margin: 5px 0 5px 0;
+}
+#actions{
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
 #show_snippet{
  background: #AAE8E8;
  border: 1px dashed #999;
- width: 250px;
+ width: 220px;
+}
+.ih{
+  font-size: 12px;
+}
+.ih hr{
+  width: 100px;
+  margin-bottom: 1px;
 }
 
 
- .indexTable{
-  width: 100%;
-  margin: 0px;
-  border-collapse: collapse;
-  
-}
-.indexTable tr{
-  border: 1px solid #953533;
 
-}
-.indexTable th{
-  color: #F5F5F5;
-  text-align: left;
-  background: #953533;
-  vertical-align: bottom;
-  padding: 5px 0 5px 5px;
-}
-.indexTable td{
-  padding: 5px;
-}
-
-#actions{
-  width: 200px;
-}
+/* //////////////////// */
 #showLinks{
   text-align: right;
 }
@@ -235,7 +232,7 @@ em.current{
   color: #02B0D7;
 }
 #footer{
-  margin: 0 auto 50px; auto;
+  margin: 0 auto 50px auto;
   width: 100%;
   min-width: 800px;
   text-align: center;
@@ -266,17 +263,8 @@ img[alt=logo]{
   margin: 0 20px 0 0;
 }
 
-#userWraper{
-  position: relative;
-  height: 100%;
-  width: 760px;
-  margin: 0 auto 5px auto;
-}
-#user_notice{
-}
-#user_info{
-  text-align: right;
-}
+
+
 .user_a, .user_a:link, .user_a:visited{
   margin: 0;
   padding: 0;
@@ -292,7 +280,23 @@ img[alt=logo]{
   text-decoration: underline;
 }
 
+#userWraper{
+  width: 760px;
+  height: 30px;
+  line-height: 30px;
+  margin: 15px auto 10px auto;
+}
+#userWraper p{
+  margin: 0;
+}
+
 #user_notice{
   float: left;
-  padding-top: 5px;
+}
+#user_info{
+  float: right;
+  
+}
+
+
 }
