@@ -1,0 +1,27 @@
+  <div class="indexBody">
+   
+      <div id="lang">
+        <div id="langHead" class="ih">Lang<hr/></div>
+        <%= gist.lang %>
+      </div>
+       
+      <div id="desc">
+        <div id="descHead" class="ih">Description<hr/></div>
+        <%= gist.description %>
+      </div>
+
+       <div id="snippet">
+          <div id="snippetHead" class="ih">Snippet<hr/></div>
+          <div id="show_snippet">
+          <%= raw Pygments.highlight(gist.snippet.length > 20 ? gist.snippet[0,20] + "..." : gist.snippet, lexer: gist.lang) %>
+          </div>
+      </div>
+        
+      <div id="actions">
+        <%= link_to 'Show', gist %>
+        <%- if user_signed_in? %>
+          <%= link_to 'Edit', edit_gist_path(gist) %>
+          <%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%- end %>
+      </div>
+    </div>

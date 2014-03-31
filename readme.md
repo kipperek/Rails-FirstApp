@@ -19,7 +19,7 @@ Aplikacja Ruby on Rails - My gists
 	--------------
 	
 	-gem 'pygments.rb'
-	-gem 'will_paginate'
+	-gem 'kaminari'
 	-gem 'devise'
 	
 
