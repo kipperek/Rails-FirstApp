@@ -226,16 +226,10 @@ input[type=submit]{
 .pagination a:hover{
   color:  #953533;
 }
-.disabled{
-  display: none;
-}
-em.current{
-  font-style:normal;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
+.current{
   color: #02B0D7;
 }
+
 #footer{
   width: 100%;
   text-align: center;

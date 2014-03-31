@@ -218,19 +218,13 @@ input[type=submit]{
   background: none;
   font-size: 18px;
 }
+.current{
+  color: #02B0D7;
+}
 .pagination a:hover{
   color:  #953533;
 }
-.disabled{
-  display: none;
-}
-em.current{
-  font-style:normal;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  color: #02B0D7;
-}
+
 #footer{
   margin: 0 auto 50px auto;
   width: 100%;
