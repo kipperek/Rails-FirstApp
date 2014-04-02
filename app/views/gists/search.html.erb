@@ -36,9 +36,9 @@ allowed = allowed.sort
 <h3>Results</h3>
 <hr/>
  <div id="gistsContainer">
-    <div id="page">
+   
       <%= render @gists %>
-    </div>
+
   </div>
   <%= paginate @gists %>
 <% elsif(@gists.length == 0 && (params.has_key?(:lang) || params.has_key?(:desc))) %>

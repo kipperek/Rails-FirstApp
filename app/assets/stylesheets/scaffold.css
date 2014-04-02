@@ -3,7 +3,7 @@
 body { background-color: #fff; color: #000;   margin: 0;}
 
 body, p, ol, ul, td {
-  font-family: Sans;
+  font-family: Sans, Tahoma;
   font-size:   18px;
   color: #000;
   line-height: 18px;
@@ -170,17 +170,18 @@ input[type=submit]{
 /* TUTAJ PREZENACJA DANYCH */
 
 .indexBody{
+  text-align: left;
   background: #E9E9E9;
   vertical-align: top;
   display: inline-block;
-  margin: 6px 3px 6px 3px;
+  margin: 6px 2px 6px 2px;
   padding:10px;
   border: 1px solid #939393;
   border-radius: 10px;
   width: 221px;
 }
 .indexBody div{
-  margin: 5px 0 5px 0;
+  margin: 5px 0px 5px 0px;
 }
 #actions{
   margin-top: 10px;
@@ -291,6 +292,12 @@ img[alt=logo]{
   float: right;
   
 }
+
+#gistsContainer{
+  text-align:center;
+  margin: 0;
+}
+
 
 
 }
